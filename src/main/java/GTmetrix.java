@@ -9,27 +9,27 @@ import java.util.concurrent.TimeUnit;
 
 public class GTmetrix {
 
-    public static String FindPercentage(String grade){
+    public static String FindPercentage(String gradeValue){
         String str="Invalid Grade";
-        if(grade.equals("A"))
+        if(gradeValue.equals("A"))
             str="91%-100%";
-        else if(grade.equals("B"))
+        else if(gradeValue.equals("B"))
             str="81%-90%";
-        else if(grade.equals("C"))
+        else if(gradeValue.equals("C"))
             str="71%-80%";
-        else if(grade.equals("D"))
+        else if(gradeValue.equals("D"))
             str="61%-70%";
-        else if(grade.equals("E"))
+        else if(gradeValue.equals("E"))
             str="51%-60%";
-        else if(grade.equals("F"))
+        else if(gradeValue.equals("F"))
             str="41%-50%";
-        else if(grade.equals("G"))
+        else if(gradeValue.equals("G"))
             str="31%-40%";
-        else if(grade.equals("H"))
+        else if(gradeValue.equals("H"))
             str="21%-30%";
-        else if(grade.equals("I"))
+        else if(gradeValue.equals("I"))
             str="11%-20%";
-        else if(grade.equals("J"))
+        else if(gradeValue.equals("J"))
             str="0%-10%";
         return str;
     }
@@ -75,7 +75,7 @@ public class GTmetrix {
 
         driver.findElement(By.xpath("//h3[text()='GTmetrix | Website Performance Testing and Monitoring']")).click();
 
-        driver.findElement(By.name("url")).sendKeys("www.tothenew.com");
+        driver.findElement(By.name("url")).sendKeys("www.youtube.com");
         driver.findElement(By.xpath("//button[text()='Test your site']")).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[text()='GTmetrix Grade ']")));
 
